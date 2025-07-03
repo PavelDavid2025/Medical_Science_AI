@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: La Revolución de la IA en la Medicina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #0a9396, #94d2bd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-8 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight"><span class="gradient-text">La Revolución Silenciosa</span></h1>
+            <h2 class="text-2xl md:text-4xl font-bold text-[#005f73]">Cómo la IA está reinventando la Medicina</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">La Inteligencia Artificial ha dejado de ser una promesa para convertirse en el estetoscopio del siglo XXI, potenciando el diagnóstico, personalizando tratamientos y optimizando la gestión sanitaria.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <section id="applications" class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h3 class="text-3xl font-bold text-center mb-8 text-[#005f73]">El Nuevo Maletín Médico Digital</h3>
+                <p class="text-center text-gray-600 mb-12 max-w-4xl mx-auto">La IA se manifiesta en herramientas concretas que ya están impactando diversas áreas de la medicina. Su capacidad para analizar grandes volúmenes de datos a una velocidad sobrehumana abre nuevas fronteras en la precisión y la eficiencia.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    
+                    <div class="order-2 md:order-1">
+                        <h4 class="text-2xl font-bold mb-4 text-[#0a9396]">Diagnóstico por Imagen de Alta Precisión</h4>
+                        <p class="text-gray-600 mb-4">Los algoritmos de IA analizan imágenes médicas para detectar patologías con una precisión que iguala o supera al ojo humano. Esto es vital para la detección temprana de enfermedades, mejorando drásticamente el pronóstico de los pacientes.</p>
+                        <p class="text-gray-600">El gráfico muestra la distribución del impacto de la IA en las principales especialidades de diagnóstico por imagen, con la oncología a la cabeza gracias a la detección temprana de tumores en mamografías y TACs.</p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="chart-container">
+                            <canvas id="imagingChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="order-3">
+                         <div class="chart-container">
+                            <canvas id="drugDiscoveryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="order-4">
+                        <h4 class="text-2xl font-bold mb-4 text-[#0a9396]">Acelerando el Descubrimiento de Fármacos</h4>
+                        <p class="text-gray-600 mb-4">El proceso para crear un nuevo medicamento es tradicionalmente largo y extremadamente costoso. La IA reduce drásticamente estos tiempos y costes al analizar bases de datos moleculares, predecir la eficacia de compuestos y reposicionar fármacos existentes.</p>
+                        <p class="text-gray-600">La comparación es clara: la IA no solo ahorra miles de millones, sino que también acelera la llegada de tratamientos innovadores a los pacientes que los necesitan.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="personalization" class="bg-[#005f73] text-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h3 class="text-3xl font-bold text-center mb-8">Hacia una Medicina Personalizada</h3>
+                <p class="text-center text-gray-200 mb-12 max-w-4xl mx-auto">La era de los tratamientos genéricos está llegando a su fin. La IA permite diseñar terapias a medida para cada individuo, analizando su perfil genético, historial y estilo de vida para determinar el tratamiento más efectivo y con menos efectos secundarios.</p>
+                
+                <div class="flex flex-col items-center space-y-4">
+                    <div class="w-full max-w-sm bg-[#0a9396] p-4 rounded-lg text-center shadow-md">
+                        <div class="font-bold text-xl">1. Recopilación de Datos</div>
+                        <div class="text-sm">Perfil genómico, historial clínico, datos de wearables</div>
+                    </div>
+                    <div class="text-4xl font-black text-[#94d2bd]">↓</div>
+                    <div class="w-full max-w-sm bg-[#0a9396] p-4 rounded-lg text-center shadow-md">
+                        <div class="font-bold text-xl">2. Análisis con IA</div>
+                        <div class="text-sm">Identificación de patrones y biomarcadores</div>
+                    </div>
+                    <div class="text-4xl font-black text-[#94d2bd]">↓</div>
+                     <div class="w-full max-w-sm bg-[#0a9396] p-4 rounded-lg text-center shadow-md">
+                        <div class="font-bold text-xl">3. Predicción de Respuesta</div>
+                        <div class="text-sm">Simulación de la eficacia de diferentes fármacos</div>
+                    </div>
+                    <div class="text-4xl font-black text-[#94d2bd]">↓</div>
+                    <div class="w-full max-w-sm bg-[#ee9b00] p-4 rounded-lg text-center shadow-md">
+                        <div class="font-bold text-xl text-black">4. Tratamiento de Precisión</div>
+                        <div class="text-sm text-gray-800">Terapia y dosis optimizadas para el paciente</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="future" class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h3 class="text-3xl font-bold text-center mb-8 text-[#005f73]">Tendencias que Definen el Futuro</h3>
+                 <p class="text-center text-gray-600 mb-12 max-w-4xl mx-auto">La innovación no se detiene. Varias tendencias emergentes prometen llevar las capacidades de la IA en medicina a un nivel completamente nuevo, desde la creación de réplicas virtuales de pacientes hasta el uso de modelos de lenguaje para asistir en la documentación clínica.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 text-[#0a9396]">Impacto vs. Madurez de las Nuevas Tecnologías</h4>
+                        <p class="text-gray-600 mb-4">El gráfico de radar evalúa las tendencias clave en dos ejes: su nivel de madurez actual en el sector y su potencial de impacto a largo plazo. Tecnologías como los 'wearables' y el 'aprendizaje federado' ya muestran una alta madurez.</p>
+                        <p class="text-gray-600">Por otro lado, los 'gemelos digitales', aunque menos maduros, presentan el mayor potencial para revolucionar la forma en que probamos y aplicamos tratamientos, al permitir simulaciones complejas en un entorno virtual seguro.</p>
+                    </div>
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="futureTrendsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ethics" class="bg-gray-800 text-white rounded-2xl shadow-lg p-6 md:p-8">
+                 <h3 class="text-3xl font-bold text-center mb-8 text-[#94d2bd]">Desafíos Éticos: El Factor Humano</h3>
+                 <p class="text-center text-gray-300 mb-12 max-w-4xl mx-auto">La poderosa capacidad de la IA conlleva una gran responsabilidad. Abordar los desafíos éticos es fundamental para garantizar una implementación justa, segura y que no deshumanice la relación crucial entre el médico y el paciente.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <div class="text-5xl mb-4 text-[#ee9b00]">⚖️</div>
+                        <h4 class="text-xl font-bold mb-2">Sesgos y Equidad</h4>
+                        <p class="text-gray-400 text-sm">Los algoritmos deben entrenarse con datos diversos para evitar perpetuar desigualdades en salud.</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <div class="text-5xl mb-4 text-[#ee9b00]">🛡️</div>
+                        <h4 class="text-xl font-bold mb-2">Privacidad de Datos</h4>
+                        <p class="text-gray-400 text-sm">La protección de la información sensible del paciente es una prioridad técnica y regulatoria absoluta.</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <div class="text-5xl mb-4 text-[#ee9b00]">👨‍⚖️</div>
+                        <h4 class="text-xl font-bold mb-2">Responsabilidad</h4>
+                        <p class="text-gray-400 text-sm">Definir quién es responsable ante un error de la IA es un desafío legal y ético clave.</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <div class="text-5xl mb-4 text-[#ee9b00]">🤝</div>
+                        <h4 class="text-xl font-bold mb-2">Relación Médico-Paciente</h4>
+                        <p class="text-gray-400 text-sm">La IA debe ser una herramienta que libere tiempo al médico para fortalecer el cuidado humano.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-16 pb-8">
+            <p class="text-gray-500">Infografía generada a partir del informe "La Inteligencia Artificial Revoluciona la Medicina".</p>
+            <p class="text-gray-400 text-sm">Diseño y desarrollo por Canvas Infographics, 2025.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const wrapLabel = (label) => {
+                if (typeof label === 'string' && label.length > 16) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    words.forEach(word => {
+                        if ((currentLine + word).length > 16) {
+                            lines.push(currentLine.trim());
+                            currentLine = '';
+                        }
+                        currentLine += word + ' ';
+                    });
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+                return label;
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(' ');
+                } else {
+                  return label;
+                }
+            };
+            
+            const chartOptionsTemplate = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#374151',
+                            font: {
+                                family: "'Inter', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: '#374151' },
+                        grid: { color: '#e5e7eb' }
+                    },
+                    x: {
+                        ticks: { color: '#374151' },
+                        grid: { color: '#e5e7eb' }
+                    }
+                }
+            };
+
+            const palette = {
+                primary: '#0a9396',
+                secondary: '#94d2bd',
+                accent: '#ee9b00',
+                danger: '#ae2012',
+                dark: '#005f73',
+                highlight: '#ca6702'
+            };
+
+            const imagingCtx = document.getElementById('imagingChart');
+            if (imagingCtx) {
+                new Chart(imagingCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Oncología', 'Oftalmología', 'Cardiología', 'Otros'],
+                        datasets: [{
+                            label: 'Impacto de la IA en Diagnóstico',
+                            data: [45, 25, 20, 10],
+                            backgroundColor: [palette.primary, palette.secondary, palette.dark, palette.accent],
+                            borderColor: '#ffffff',
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    color: '#374151',
+                                    font: { family: "'Inter', sans-serif" }
+                                }
+                            },
+                            tooltip: { callbacks: { title: tooltipTitleCallback } }
+                        }
+                    }
+                });
+            }
+
+            const drugDiscoveryCtx = document.getElementById('drugDiscoveryChart');
+            if (drugDiscoveryCtx) {
+                const labels = ['Descubrimiento Tradicional', 'Descubrimiento con IA'];
+                new Chart(drugDiscoveryCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels.map(wrapLabel),
+                        datasets: [
+                            {
+                                label: 'Tiempo (Años)',
+                                data: [12, 4],
+                                backgroundColor: palette.primary,
+                                yAxisID: 'y'
+                            },
+                            {
+                                label: 'Coste (Millones de $)',
+                                data: [2600, 700],
+                                backgroundColor: palette.accent,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        ...chartOptionsTemplate,
+                        scales: {
+                            y: {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                title: { display: true, text: 'Años' },
+                                grid: { drawOnChartArea: false }
+                            },
+                            y1: {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                title: { display: true, text: 'Millones de $' }
+                            },
+                            x: {
+                                ticks: { color: '#374151' },
+                                grid: { color: '#e5e7eb' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const futureTrendsCtx = document.getElementById('futureTrendsChart');
+            if(futureTrendsCtx) {
+                 const labels = ['IA Generativa', 'Aprendizaje Federado', 'Gemelos Digitales', 'Wearables y Monitoreo Continuo'];
+                 new Chart(futureTrendsCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: labels.map(wrapLabel),
+                        datasets: [
+                            {
+                                label: 'Impacto Potencial',
+                                data: [4, 5, 5, 4],
+                                fill: true,
+                                backgroundColor: 'rgba(10, 147, 150, 0.2)',
+                                borderColor: palette.primary,
+                                pointBackgroundColor: palette.primary,
+                            },
+                            {
+                                label: 'Nivel de Madurez',
+                                data: [3, 4, 2, 5],
+                                fill: true,
+                                backgroundColor: 'rgba(238, 155, 0, 0.2)',
+                                borderColor: palette.accent,
+                                pointBackgroundColor: palette.accent,
+                            }
+                        ]
+                    },
+                    options: {
+                        ...chartOptionsTemplate,
+                        plugins: {
+                             legend: {
+                                position: 'bottom',
+                                labels: { color: '#374151', font: { family: "'Inter', sans-serif" } }
+                            },
+                            tooltip: { callbacks: { title: tooltipTitleCallback } }
+                        },
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                max: 5,
+                                pointLabels: {
+                                    font: { size: 12, family: "'Inter', sans-serif" },
+                                    color: '#374151'
+                                },
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    color: '#6b7280'
+                                },
+                                grid: { color: '#e5e7eb' }
+                            }
+                        }
+                    }
+                 });
+            }
+        });
+    </script>
+</body>
+</html>
